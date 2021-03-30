@@ -12,7 +12,6 @@ import ToastListener from './components/ToastListener'
 import PageLoader from './components/PageLoader'
 import EasterEgg from './components/EasterEgg'
 import Pools from './views/Pools'
-import GlobalCheckBullHiccupClaimStatus from './views/Collectibles/components/GlobalCheckBullHiccupClaimStatus'
 import history from './routerHistory'
 
 // Route-based code splitting
@@ -21,7 +20,6 @@ const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
 const Ifos = lazy(() => import('./views/Ifos'))
 const NotFound = lazy(() => import('./views/NotFound'))
-const Collectibles = lazy(() => import('./views/Collectibles'))
 const Teams = lazy(() => import('./views/Teams'))
 const Team = lazy(() => import('./views/Teams/Team'))
 const Profile = lazy(() => import('./views/Profile'))
@@ -64,9 +62,6 @@ const App: React.FC = () => {
             <Route path="/ifo">
               <Ifos />
             </Route>
-            <Route path="/collectibles">
-              <Collectibles />
-            </Route>
             <Route exact path="/teams">
               <Teams />
             </Route>
@@ -84,7 +79,7 @@ const App: React.FC = () => {
               <Redirect to="/pools" />
             </Route>
             <Route path="/nft">
-              <Redirect to="/collectibles" />
+              <Redirect to="/" />
             </Route>
             {/* 404 */}
             <Route component={NotFound} />
@@ -93,7 +88,6 @@ const App: React.FC = () => {
       </Menu>
       <EasterEgg iterations={2} />
       <ToastListener />
-      <GlobalCheckBullHiccupClaimStatus />
     </Router>
   )
 }

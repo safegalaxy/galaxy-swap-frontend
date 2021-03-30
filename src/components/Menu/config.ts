@@ -31,11 +31,6 @@ const config: MenuEntry[] = [
     href: '/pools',
   },
   {
-    label: 'Collectibles',
-    icon: 'NftIcon',
-    href: '/collectibles',
-  },
-  {
     label: 'Teams & Profile',
     icon: 'GroupsIcon',
     calloutClass: 'rainbow',

@@ -18,7 +18,6 @@ import useI18n from 'hooks/useI18n'
 import { useProfile } from 'state/hooks'
 import Menu from './components/Menu'
 import CardHeader from './components/CardHeader'
-import Collectibles from './components/Collectibles'
 import WalletNotConnected from './components/WalletNotConnected'
 import StatBox from './components/StatBox'
 import EditProfileAvatar from './components/EditProfileAvatar'
@@ -125,7 +124,6 @@ const PublicProfile = () => {
               </Heading>
               <AchievementsList />
             </Section>
-            <Collectibles />
           </CardBody>
         </Card>
       </div>
