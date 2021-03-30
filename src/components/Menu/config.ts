@@ -30,11 +30,11 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/pools',
   },
-  {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: '/lottery',
-  },
+  // {
+  //   label: 'Lottery',
+  //   icon: 'TicketIcon',
+  //   href: '/lottery',
+  // },
   {
     label: 'Collectibles',
     icon: 'NftIcon',
@@ -80,11 +80,6 @@ const config: MenuEntry[] = [
         href: 'https://pancakeswap.info/accounts',
       },
     ],
-  },
-  {
-    label: 'IFO',
-    icon: 'IfoIcon',
-    href: '/ifo',
   },
   {
     label: 'More',
