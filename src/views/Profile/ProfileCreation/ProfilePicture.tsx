@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { AutoRenewIcon, Button, Card, CardBody, Heading, Skeleton, Text } from '@pancakeswap-libs/uikit'
-import { Link as RouterLink } from 'react-router-dom'
 import { useWeb3React } from '@web3-react/core'
 import nftList from 'config/constants/nfts'
 import useI18n from 'hooks/useI18n'
@@ -12,10 +11,6 @@ import useGetWalletNfts from 'hooks/useGetWalletNfts'
 import SelectionCard from '../components/SelectionCard'
 import NextStepButton from '../components/NextStepButton'
 import { ProfileCreationContext } from './contexts/ProfileCreationProvider'
-
-const Link = styled(RouterLink)`
-  color: ${({ theme }) => theme.colors.primary};
-`
 
 const NftWrapper = styled.div`
   margin-bottom: 24px;
@@ -87,12 +82,6 @@ const ProfilePicture: React.FC = () => {
               814,
               'Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.',
             )}
-          </Text>
-          <Text as="p" color="textSubtle" mb="24px">
-            {TranslateString(816, 'Only approved Pancake Collectibles can be used.')}
-            <Link to="/collectibles" style={{ marginLeft: '4px' }}>
-              {TranslateString(999, 'See the list >')}
-            </Link>
           </Text>
           <NftWrapper>
             {isLoading ? (
