@@ -41,25 +41,6 @@ const config: MenuEntry[] = [
     href: '/collectibles',
   },
   {
-    label: 'Teams & Profile',
-    icon: 'GroupsIcon',
-    calloutClass: 'rainbow',
-    items: [
-      {
-        label: 'Leaderboard',
-        href: '/teams',
-      },
-      {
-        label: 'Task Center',
-        href: '/profile/tasks',
-      },
-      {
-        label: 'Your Profile',
-        href: '/profile',
-      },
-    ],
-  },
-  {
     label: 'Info',
     icon: 'InfoIcon',
     items: [

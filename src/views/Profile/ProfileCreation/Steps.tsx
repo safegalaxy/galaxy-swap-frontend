@@ -4,7 +4,6 @@ import NoWalletConnected from '../components/WalletNotConnected'
 import { ProfileCreationContext } from './contexts/ProfileCreationProvider'
 import Mint from './Mint'
 import ProfilePicture from './ProfilePicture'
-import TeamSelection from './TeamSelection'
 import UserName from './UserName'
 
 const Steps = () => {
@@ -28,10 +27,6 @@ const Steps = () => {
   }
 
   if (currentStep === 2) {
-    return <TeamSelection />
-  }
-
-  if (currentStep === 3) {
     return <UserName />
   }
 

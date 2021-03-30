@@ -6,7 +6,6 @@ import PageLoader from 'components/PageLoader'
 import { useFetchAchievements, useProfile } from 'state/hooks'
 import ProfileCreation from './ProfileCreation'
 import Header from './components/Header'
-import TaskCenter from './TaskCenter'
 import PublicProfile from './PublicProfile'
 
 const Profile = () => {
@@ -32,9 +31,6 @@ const Profile = () => {
       <Header />
       <Route exact path="/profile">
         <PublicProfile />
-      </Route>
-      <Route path="/profile/tasks">
-        <TaskCenter />
       </Route>
     </Page>
   )
