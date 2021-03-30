@@ -4,7 +4,6 @@ import toastsReducer from './toasts'
 import poolsReducer from './pools'
 import pricesReducer from './prices'
 import profileReducer from './profile'
-import teamsReducer from './teams'
 import achievementsReducer from './achievements'
 import blockReducer from './block'
 
@@ -16,7 +15,6 @@ export default configureStore({
     pools: poolsReducer,
     prices: pricesReducer,
     profile: profileReducer,
-    teams: teamsReducer,
     achievements: achievementsReducer,
     block: blockReducer,
   },

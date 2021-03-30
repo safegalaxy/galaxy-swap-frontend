@@ -175,12 +175,6 @@ const UserName: React.FC = () => {
       <Heading as="h3" size="xl" mb="24px">
         {TranslateString(1110, 'Set Your Name')}
       </Heading>
-      <Text as="p" mb="24px">
-        {TranslateString(
-          999,
-          'This name will be shown in team leaderboards and search results as long as your profile is active.',
-        )}
-      </Text>
       <Card mb="24px">
         <CardBody>
           <Heading as="h4" size="lg" mb="8px">

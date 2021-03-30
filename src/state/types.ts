@@ -80,16 +80,6 @@ export type TeamResponse = {
   4: boolean
 }
 
-export type TeamsById = {
-  [key: string]: Team
-}
-
-export interface TeamsState {
-  isInitialized: boolean
-  isLoading: boolean
-  data: TeamsById
-}
-
 export interface Achievement {
   id: string
   type: CampaignType
@@ -136,7 +126,6 @@ export interface State {
   prices: PriceState
   pools: PoolsState
   profile: ProfileState
-  teams: TeamsState
   achievements: AchievementState
   block: BlockState
 }

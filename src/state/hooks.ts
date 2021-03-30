@@ -16,9 +16,8 @@ import {
   clear as clearToast,
   setBlock,
 } from './actions'
-import { State, Farm, Pool, ProfileState, TeamsState, AchievementState, PriceState } from './types'
+import { State, Farm, Pool, ProfileState, AchievementState, PriceState } from './types'
 import { fetchProfile } from './profile'
-import { fetchTeam, fetchTeams } from './teams'
 import { fetchAchievements } from './achievements'
 import { fetchPrices } from './prices'
 
@@ -131,30 +130,6 @@ export const useFetchProfile = () => {
 export const useProfile = () => {
   const { isInitialized, isLoading, data, hasRegistered }: ProfileState = useSelector((state: State) => state.profile)
   return { profile: data, hasProfile: isInitialized && hasRegistered, isInitialized, isLoading }
-}
-
-// Teams
-
-export const useTeam = (id: number) => {
-  const team: Team = useSelector((state: State) => state.teams.data[id])
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(fetchTeam(id))
-  }, [id, dispatch])
-
-  return team
-}
-
-export const useTeams = () => {
-  const { isInitialized, isLoading, data }: TeamsState = useSelector((state: State) => state.teams)
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(fetchTeams())
-  }, [dispatch])
-
-  return { teams: data, isInitialized, isLoading }
 }
 
 // Achievements
